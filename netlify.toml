@@ -6,5 +6,5 @@
   node_bundler = "esbuild"
 
 [build]
-  command = "echo 'No build needed'"
+  command = "mkdir -p public && echo 'No build needed'"
   publish = "public"
