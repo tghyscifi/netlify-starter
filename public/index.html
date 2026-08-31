@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waline Netlify Starter</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      max-width: 640px;
+      margin: 80px auto;
+      padding: 0 24px;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    h1 { font-size: 1.5rem; }
+    code {
+      background: #f2f2f2;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+    .endpoint {
+      display: block;
+      margin: 16px 0;
+      padding: 12px 16px;
+      background: #f7f7f7;
+      border-radius: 8px;
+      word-break: break-all;
+    }
+    a { color: #0d6efd; }
+  </style>
+</head>
+<body>
+  <h1>Waline Netlify Starter</h1>
+  <p>此站点部署的是 <a href="https://waline.js.org/" target="_blank" rel="noopener">Waline</a> 评论系统的后端服务,由一个 Serverless Function 提供 API,本身不是一个独立的博客页面。</p>
+  <p>请将下面的地址配置为你博客前端 Waline 组件的 <code>serverURL</code>:</p>
+  <code class="endpoint" id="endpoint"></code>
+  <p>更多用法参考 <a href="https://waline.js.org/guide/deploy/netlify.html" target="_blank" rel="noopener">Waline 部署文档</a>。</p>
+  <script>
+    document.getElementById('endpoint').textContent = location.origin + '/.netlify/functions/comment';
+  </script>
+</body>
+</html>
