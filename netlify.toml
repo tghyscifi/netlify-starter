@@ -4,7 +4,3 @@
 [functions]
   directory = "netlify/functions/"
   node_bundler = "esbuild"
-
-[build]
-  command = "mkdir -p public && echo 'No build needed'"
-  publish = "public"
